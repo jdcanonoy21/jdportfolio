@@ -15,9 +15,14 @@ const About = () => {
             <img src={AboutImage} alt="About" />
           </div>
           <div className="about__cv">
-            <Link to={CV} className="btn primary">
+            <a
+              href={CV}
+              className="btn primary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Download CV <HiDownload />
-            </Link>
+            </a>
           </div>
         </div>
         <div className="about__right">

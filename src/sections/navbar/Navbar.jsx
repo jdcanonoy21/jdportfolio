@@ -1,15 +1,14 @@
-import Logo from "../../assets/logo.png";
+import { ReactComponent as Logo } from "../../assets/logo.svg";
 import data from "./data";
-import { Link } from "react-router-dom";
 import "./navbar.css";
 
 const Navbar = () => {
   return (
     <nav>
       <div className="container nav__container">
-        <Link to="index.html" className="nav__logo">
-          <img src={Logo} alt="Logo" />
-        </Link>
+        <a href="/" className="nav__logo">
+          <Logo className="nav__logo-svg" />
+        </a>
         <ul className="nav__menu">
           {data.map((item) => (
             <li key={item.id}>

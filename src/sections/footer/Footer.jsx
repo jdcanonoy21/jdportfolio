@@ -1,23 +1,15 @@
-import { links, socials } from "./data";
+import { socials } from "./data";
 import "./footer.css";
-import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <footer>
       <div className="container footer__container">
-        <ul className="nav__menu">
-          {links.map((item) => (
-            <li key={item.id}>
-              <Link to={item.link}>{item.title}</Link>
-            </li>
-          ))}
-        </ul>
         <div className="footer__socials">
           {socials.map((item) => (
-            <Link key={item.id} to={item.link}>
+            <a key={item.id} href={item.link}>
               {item.icon}
-            </Link>
+            </a>
           ))}
         </div>
         <div className="footer__copyright">

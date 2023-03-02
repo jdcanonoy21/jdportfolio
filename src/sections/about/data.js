@@ -5,7 +5,7 @@ const data = [
   { id: 1, icon: <FaAward />, title: "Experience", desc: "11+ Years Working" },
   { id: 2, icon: <TbBooks />, title: "React", desc: "2+ Years Working" },
   { id: 3, icon: <TbBooks />, title: "Node.js", desc: "1+ Year Working" },
-  { id: 4, icon: <TbBooks />, title: "Javascript", desc: "4+ Years Working" },
+  { id: 4, icon: <TbBooks />, title: "Javascript", desc: "3+ Years Working" },
   { id: 5, icon: <TbBooks />, title: "CSS", desc: "4+ Years Working" },
   {
     id: 6,
