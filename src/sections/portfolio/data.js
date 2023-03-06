@@ -1,84 +1,48 @@
-import Image1 from "../../assets/project1.jpg";
-import Image2 from "../../assets/project2.jpg";
-import Image3 from "../../assets/project3.jpg";
-import Image4 from "../../assets/project4.jpg";
-import Image5 from "../../assets/project5.jpg";
-import Image6 from "../../assets/project6.jpg";
-import Image7 from "../../assets/project7.jpg";
-import Image8 from "../../assets/project8.jpg";
+import Image1 from "../../assets/etracs.jpg";
+import Image2 from "../../assets/ramesesinc.jpg";
+import Image3 from "../../assets/freelance-logos.jpg";
+import Image4 from "../../assets/inkstone.jpg";
 
 const data = [
   {
     id: 1,
-    category: "uiux",
+    category: "frontend",
     image: Image1,
-    title: "Project Title One (UIUX)",
-    desc: "Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa officia aut!",
-    demo: "http://egatortutorials.com",
-    github: "https://github.com/egattor",
+    title: "Etracs Website",
+    desc: "Etracs org emphasizes simplicity, balance, alignment, and contrast!",
+    demo: "https://etracs.org/index",
+    github: "/",
+    alt: "etracs frontend design image",
   },
   {
     id: 2,
     category: "frontend",
     image: Image2,
-    title: "Project Title Two (Frontend)",
-    desc: "Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa officia aut!",
-    demo: "http://egatortutorials.com",
-    github: "https://github.com/egattor",
+    title: "Rameses Inc Website",
+    desc: "Rameses Inc one page website",
+    demo: "https://www.ramesesinc.com/",
+    github: "/",
+    alt: "Rameses Inc frontend design image",
   },
   {
     id: 3,
-    category: "frontend",
+    category: "graphics",
     image: Image3,
-    title: "Project Title Three (Frontend)",
-    desc: "Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa officia aut!",
-    demo: "http://egatortutorials.com",
-    github: "https://github.com/egattor",
+    title: "Freelance Logo Design",
+    desc: "I have done freelance logo design work",
+    demo: "/",
+    github: "/",
+    alt: "Freelance Logo Design",
   },
   {
     id: 4,
-    category: "uiux",
+    category: "frontend",
     image: Image4,
-    title: "Project Title Four (UIUX)",
-    desc: "Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa officia aut!",
-    demo: "http://egatortutorials.com",
-    github: "https://github.com/egattor",
-  },
-  {
-    id: 5,
-    category: "uiux",
-    image: Image5,
-    title: "Project Title Five (UIUX)",
-    desc: "Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa officia aut! ",
-    demo: "http://egatortutorials.com",
-    github: "https://github.com/egattor",
-  },
-  {
-    id: 6,
-    category: "frontend",
-    image: Image6,
-    title: "Project Title Six (Frontend)",
-    desc: "Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa officia aut!",
-    demo: "http://egatortutorials.com",
-    github: "https://github.com/egattor",
-  },
-  {
-    id: 7,
-    category: "frontend",
-    image: Image7,
-    title: "Project Title Seven (Frontend)",
-    desc: "Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa officia aut!",
-    demo: "http://egatortutorials.com",
-    github: "https://github.com/egattor",
-  },
-  {
-    id: 8,
-    category: "Graphics",
-    image: Image8,
-    title: "Project Title Eight (Backend)",
-    desc: "Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa officia aut!",
-    demo: "http://egatortutorials.com",
-    github: "https://github.com/egattor",
+    title: "Inkstone",
+    desc: "I have done freelance website frontend design",
+    demo: "https://inkstoneliterary.com/",
+    github: "/",
+    alt: "Freelance Website Design",
   },
 ];
 

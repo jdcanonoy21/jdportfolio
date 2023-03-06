@@ -2,21 +2,21 @@ import Card from "../../components/Card";
 import { Link } from "react-router-dom";
 
 const Project = (props) => {
-  const { title, image, desc } = props;
+  const { title, image, desc, alt, demo } = props;
   return (
     <Card className="portfolio__project">
       <div className="portfolio__project-image">
-        <img src={image} alt="Project Project Image" />
+        <img src={image} alt={alt} />
       </div>
       <h4>{title}</h4>
       <p>{desc}</p>
       <div className="portfolio__project-cta">
-        <Link to="#" className="btn sm">
+        <Link to={demo} className="btn sm" target="_blank">
           Demo
         </Link>
-        <Link to="#" className="btn sm primary">
+        {/* <Link to="#" className="btn sm primary">
           Github
-        </Link>
+        </Link> */}
       </div>
     </Card>
   );
