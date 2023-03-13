@@ -3,14 +3,14 @@ import Theme from "../../theme/Theme";
 import data from "./data";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import "./header.css";
+import "./Header.scss";
 
 const Header = () => {
   useEffect(() => {
     AOS.init({ duration: 2000 });
   }, []);
   return (
-    <section id="header">
+    <section class="header" id="header">
       <div className="container header__container">
         <h1 data-aos="flip-up">Jason Delle Canonoy</h1>
         <p data-aos="zoom-in">

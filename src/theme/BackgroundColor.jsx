@@ -33,7 +33,7 @@ const BackgroundColor = ({ backgroundColors }) => {
         style={{ margin: "2rem" }}
         checked={isDarkMode}
         onClick={toggleSelectedTheme}
-        size={70}
+        size={40}
       />
     </>
   );

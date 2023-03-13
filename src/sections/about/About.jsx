@@ -3,11 +3,11 @@ import AboutImage from "../../assets/about.jpg";
 import CV from "../../assets/cv.pdf";
 import data from "./data";
 import Card from "../../components/Card";
-import "./about.css";
+import "./About.scss";
 
 const About = () => {
   return (
-    <section id="about">
+    <section id="about" className="about">
       <div className="container about__container">
         <div className="about__left">
           <div className="about__portrait">
@@ -37,7 +37,7 @@ const About = () => {
               <Card key={item.id} className="about__card">
                 <span>{item.icon}</span>
                 <h5>{item.title}</h5>
-                <small>{item.desc}</small>
+                <large>{item.desc}</large>
               </Card>
             ))}
           </div>
