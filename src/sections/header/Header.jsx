@@ -16,14 +16,14 @@ const Header = () => {
         <p data-aos="zoom-in">
           I am a graphic designer, UX/UI designer & web developer
         </p>
-        <div className="header__cta" data-aos="fade-up">
+        {/* <div className="header__cta" data-aos="fade-up">
           <a href="#contact" className="btn primary">
             Let's Talk
           </a>
           <a href="#portfolio" className="btn light">
             My Work
           </a>
-        </div>
+        </div> */}
         <Theme />
         <div className="header__socials">
           {data.map((item) => (
