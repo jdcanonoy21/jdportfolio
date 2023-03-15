@@ -2,7 +2,7 @@ import { Fragment } from "react";
 import { useModalContext } from "../context/modal-context";
 import ReactDOM from "react-dom";
 import Card from "./Card";
-import "./modal.css";
+import "./Modal.scss";
 
 const Modal = ({ className, children }) => {
   const { showModal, handleCloseModal } = useModalContext();

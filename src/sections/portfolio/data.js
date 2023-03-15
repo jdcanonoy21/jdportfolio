@@ -2,6 +2,7 @@ import Image1 from "../../assets/etracs.jpg";
 import Image2 from "../../assets/ramesesinc.jpg";
 import Image3 from "../../assets/freelance-logos.jpg";
 import Image4 from "../../assets/inkstone.jpg";
+import Image5 from "../../assets/portfolio.jpg";
 
 const data = [
   {
@@ -43,6 +44,16 @@ const data = [
     demo: "https://inkstoneliterary.com/",
     github: "",
     alt: "Freelance Website Design Inkstone",
+  },
+  {
+    id: 5,
+    category: "frontend",
+    image: Image5,
+    title: "Portfolio",
+    desc: "My Portfolio",
+    demo: "https://sensational-kleicha-607ff1.netlify.app/",
+    github: "https://github.com/jdcanonoy21/jd-portfolio",
+    alt: "Portfolio Image",
   },
 ];
 

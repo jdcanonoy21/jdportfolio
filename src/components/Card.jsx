@@ -1,4 +1,4 @@
-import "./card.css";
+import "./Card.scss";
 
 const Card = ({ children, className, onClick }) => {
   return (
