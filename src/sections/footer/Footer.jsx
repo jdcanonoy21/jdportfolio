@@ -1,5 +1,5 @@
 import { socials } from "./data";
-import "./footer.css";
+import "./Footer.scss";
 
 const Footer = () => {
   return (

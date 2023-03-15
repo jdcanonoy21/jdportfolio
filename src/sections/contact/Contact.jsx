@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import data from "./data";
-import "./contact.css";
+import "./Contact.scss";
 
 const Contact = () => {
   return (

@@ -1,7 +1,7 @@
 import { primaryColors, backgroundColors } from "./data";
 import PrimaryColor from "./PrimaryColor";
 import BackgroundColor from "./BackgroundColor";
-import "./theme.css";
+import "./Theme.scss";
 
 const Theme = () => {
   return (

@@ -2,7 +2,7 @@ import { useState } from "react";
 import Projects from "./Projects";
 import ProjectsCategories from "./ProjectsCategories";
 import data from "./data";
-import "./portfolio.css";
+import "./Portfolio.scss";
 
 const Portfolio = () => {
   const [projects, setProjects] = useState(data);
@@ -24,7 +24,7 @@ const Portfolio = () => {
 
   return (
     <section id="portfolio">
-      <div className="container portfolio__container">
+      <div className="portfolio__container">
         <ProjectsCategories
           categories={uniqueCategories}
           onFilterProjects={handleFilterProjects}

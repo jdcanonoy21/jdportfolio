@@ -11,7 +11,7 @@ const data = [
     title: "Etracs Website",
     desc: "Etracs org emphasizes simplicity, balance, alignment, and contrast!",
     demo: "https://etracs.org/index",
-    github: "/",
+    github: "https://github.com/jdcanonoy21/etracsorg.git",
     alt: "etracs frontend design image",
   },
   {
@@ -21,7 +21,7 @@ const data = [
     title: "Rameses Inc Website",
     desc: "Rameses Inc one page website",
     demo: "https://www.ramesesinc.com/",
-    github: "/",
+    github: "",
     alt: "Rameses Inc frontend design image",
   },
   {
@@ -30,8 +30,8 @@ const data = [
     image: Image3,
     title: "Freelance Logo Design",
     desc: "I have done freelance logo design work",
-    demo: "/",
-    github: "/",
+    demo: "",
+    github: "",
     alt: "Freelance Logo Design",
   },
   {
@@ -41,8 +41,8 @@ const data = [
     title: "Inkstone",
     desc: "I have done freelance website frontend design",
     demo: "https://inkstoneliterary.com/",
-    github: "/",
-    alt: "Freelance Website Design",
+    github: "",
+    alt: "Freelance Website Design Inkstone",
   },
 ];
 
