@@ -1,0 +1,81 @@
+.socials {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 3rem;
+  bottom: 0;
+
+  &  a {
+    width: 3rem;
+    font-size: 1.5rem;
+    aspect-ratio: 1/1;
+    background: transparent;
+    color: var(--color-primary);
+    display: grid;
+    place-items: center;
+    border-radius: var(--border-radius-0);
+    border: 1px solid var(--color-primary);
+    transition: transform .3s ;
+    }
+  
+  & a:not(:last-of-type) {
+    margin-bottom: 1rem;
+  }
+
+  &  a:hover {
+      background: var(--color-primary);
+      color: var(--color-white);
+      transform: scale(1.3);
+    }
+  &__line {
+    width: 2px;
+    height: 8rem;
+    margin: 0;
+    margin-left: 1.4rem;
+    background-color: var(--color-primary);
+    animation: socialLine 10s;
+    animation-timing-function: ease;
+
+    /* MEDIA QUERIES (phones) */
+    @media screen and (max-width: 37.5em) {
+      height: 2rem;
+    }
+
+    /* MEDIA QUERIES (tablets) */
+    @media screen and (max-width: 56.5em) {
+        height: 3rem;
+    }
+
+
+    /* MEDIA QUERIES (Desktop) */
+    @media screen and (max-width: 64em) {
+        height: 5rem;
+    }
+
+  }
+}
+
+
+@keyframes socialLine {
+  0% {
+      opacity: 0;
+      height: 1rem;
+  }
+  25% {
+    opacity: .25;
+    height: 1rem;
+}
+  50% {
+      opacity: .5;
+      height: 3rem;
+  }
+  75% {
+    opacity: .75;
+    height: 8rem;
+  }
+  100% {
+    opacity: 1;
+    height: 5rem;
+  }
+}
+

@@ -1,0 +1,13 @@
+.show {
+  max-height: 100vh !important;
+  opacity: 1 !important;
+  transition: all 6s;
+  overflow: visible !important;
+}
+
+.hide {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all .6s;
+}

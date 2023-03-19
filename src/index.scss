@@ -1,3 +1,5 @@
+@import './sass/base/typhography';
+
 * {
     margin: 0;
     padding: 0;
@@ -15,6 +17,7 @@
     --light-lightness: 94%;
     --white-lightness: 100%;
     --color-primary: hsl(var(--primary-hue), 89%, 41%);
+    --color-secondary: hsl(var(--primary-hue), 89%, 41%);
     --color-white: hsl(0, 5%, var(--white-lightness));
     --color-light: hsl(var(--primary-hue), 5%, var(--light-lightness));
     --color-black: hsl(var(--primary-hue), 5%, var(--black-lightness));
@@ -25,6 +28,7 @@
     --container-width-md: 90%;
 
     /* BORDER RADIUS VARIABLES */
+    --border-radius-0: 50%;
     --border-radius-1: 1.2rem;
     --border-radius-2: 0.8rem;
     --border-radius-3: 0.5rem;
@@ -32,8 +36,26 @@
     /* GENERAL TRANSITION VARIABLE */
     --transition: all 500ms ease;
 }
+
 @font-face {
-    font-family: 'opensans';
+    font-family: 'josefinsans';
+    src: url('./fonts/josefinSans/josefinsans-regular-webfont.woff2') format('woff2'),
+         url('./fonts/josefinSans/josefinsans-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'josefinsans_bold';
+    src: url('./fonts/josefinSans/josefinsans-bold-webfont.woff2') format('woff2'),
+         url('./fonts/josefinSans/josefinsans-bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'openSans';
     src: url('./fonts/open-sans/opensans-regular-webfont.woff2') format('woff2'),
          url('./fonts/open-sans/opensans-regular-webfont.woff') format('woff');
     font-weight: normal;
@@ -41,8 +63,8 @@
 }
 
 @font-face {
-    font-family: 'opensans_bold';
-    src: url('./fonts/open-sans/opensans-regular-webfont.woff2') format('woff2'),
+    font-family: 'openSans_bold';
+    src: url('./fonts/open-sans/opensans-bold-webfont.woff2') format('woff2'),
          url('./fonts/open-sans/opensans-bold-webfont.woff') format('woff');
     font-weight: bold;
     font-style: normal;
@@ -52,12 +74,28 @@
 html {
     scroll-behavior: smooth;
     font-size: 62.5%;
+
+    /* MEDIA QUERIES (phones) */
+    @media screen and (max-width: 37.5em) {
+        font-size: 56.25%;
+    }
+
+    /* MEDIA QUERIES (tablets landscape) */
+    @media screen and (max-width: 56.5em) {
+        font-size: 50%;
+    }
+
+
+    /* MEDIA QUERIES (tablets landscape) */
+    @media screen and (max-width: 64em) {
+        font-size: 75%;
+    }
+ 
 }
 
 body {
-    font-family: 'opensans', sans-serif;
+    font-family: 'josefinsans', sans-serif;
     line-height: 1.6;
-    font-size: 0.9rem;
 }
 
 
@@ -106,13 +144,6 @@ main {
     --color-primary: hsl(var(--primary-hue), 89%, 41%);
 }
 
-
-
-
-
-
-
-
 /* GENERAL CONTAINER CLASS */
 .container {
     width: var(--container-width-lg);
@@ -122,10 +153,14 @@ main {
 
 /* GENERAL SECTION STYLES */
 section {
-    padding: 1rem 0;
+    padding:  0;
     background: var(--color-light);
     transition: var(--transition);
 }
+
+section + section {
+    padding: 15rem;
+} 
 
 section:nth-child(even) {
     background: var(--color-white);
@@ -140,7 +175,6 @@ section > p {
     margin: 0.5rem auto 4rem;
     width: 40%;
 }
-
 
 /* GENERAL SECTION STYLES */
 a {
@@ -196,13 +230,12 @@ img {
     color: var(--color-black);
     padding: 0.6rem 2.5rem;
     border: 2px solid transparent;
-    border-radius: var(--border-radius-2);
     cursor: pointer;
 }
 
 .btn:hover {
     background-color: transparent;
-    border-color: var(--color-light);
+    border-color: var(--color-primary);
     transform: translateY(-0.5rem);
 }
 
@@ -212,7 +245,7 @@ img {
 
 .btn.white:hover {
     background: transparent;
-    border-color: var(--color-white);
+    border-color: var(--color-primary);
 }
 
 .btn.primary {
@@ -234,57 +267,4 @@ img {
 
 
 
-/* MEDIA QUERIES (tablets) */
-@media screen and (max-width: 1024px) {
-    body {
-        font-size: 1rem;
-    }
-    
-    .container {
-        width: var(--container-width-md);
-    }
 
-    section {
-        padding: 8rem 0;
-    }
-
-    section > p {
-        width: 72%;
-        margin-bottom: 3rem;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-}
-
-
-
-
-
-/* MEDIA QUERIES (phones) */
-@media screen and (max-width: 600px) {
-    h1 {
-        font-size: 2.4rem;
-    }
-
-    h2 {
-        font-size: 1.8rem;
-    }
-
-    h3 {
-        font-size: 1.4rem;
-    }
-
-    h4 {
-        font-size: 1rem;
-    }
-
-    .btn {
-        padding: 0.6rem 1.5rem;
-    }
-
-    section > p {
-        width: var(--container-width-md);
-    }
-}

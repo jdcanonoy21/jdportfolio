@@ -1,6 +1,5 @@
-import { primaryColors, backgroundColors } from "./data";
+import { primaryColors } from "./data";
 import PrimaryColor from "./PrimaryColor";
-import BackgroundColor from "./BackgroundColor";
 import "./Theme.scss";
 
 const Theme = () => {
@@ -10,9 +9,6 @@ const Theme = () => {
         {primaryColors.map((pColor) => (
           <PrimaryColor key={pColor.className} className={pColor.className} />
         ))}
-      </div>
-      <div className="theme__background-colors">
-        <BackgroundColor backgroundColors={backgroundColors} />
       </div>
     </div>
   );

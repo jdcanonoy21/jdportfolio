@@ -1,43 +1,34 @@
-import { useEffect } from "react";
-import Theme from "../../theme/Theme";
-import data from "./data";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import { ReactComponent as Logo } from "../../assets/logo.svg";
+// import Logo from "../../components/Logo";
+import Socials from "../../components/Socials";
+import CardFlip from "../../components/CardFlip";
+import LineDraw from "../../components/LineDraw";
+import TextEffect from "../../components/TextEffect";
+import ArrowDown from "../../components/ArrowDown";
 import "./Header.scss";
 
 const Header = () => {
-  useEffect(() => {
-    AOS.init({ duration: 2000 });
-  }, []);
   return (
-    <section class="header" id="header">
-      <div className="container header__container">
-        <h1 data-aos="flip-up">Jason Delle Canonoy</h1>
-        <p data-aos="zoom-in">
-          I am a graphic designer, UX/UI designer & web developer
-        </p>
-        {/* <div className="header__cta" data-aos="fade-up">
-          <a href="#contact" className="btn primary">
-            Let's Talk
-          </a>
-          <a href="#portfolio" className="btn light">
-            My Work
-          </a>
-        </div> */}
-        <Theme />
-        <div className="header__socials">
-          {data.map((item) => (
-            <a
-              key={item.id}
-              href={item.link}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {item.icon}
-            </a>
-          ))}
+    <section className="header">
+      <CardFlip front={<Logo className="header__logo" />}>
+        <div className="header__container">
+          <LineDraw time="2500" className="header__greetings">
+            Hi, my name is
+          </LineDraw>
+          <LineDraw time="3500" className="header__main">
+            <h1>Jason Delle Canonoy</h1>
+
+            <h2>I am a frontend developer</h2>
+          </LineDraw>
+          <LineDraw time="3000" className="header__desc">
+            I am a Cebu-based frontend developer and graphic designer with
+            experience in both print and digital design.
+          </LineDraw>
+          <ArrowDown link="about" time="8000" />
         </div>
-      </div>
+      </CardFlip>
+
+      <Socials />
     </section>
   );
 };

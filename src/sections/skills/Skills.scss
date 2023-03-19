@@ -1,0 +1,64 @@
+.skills {
+  transition: var(--transition);
+  display: grid;
+  grid-template-columns: 1fr ;
+  grid-template-rows: 8rem 1fr 10rem;
+  gap: 0;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+
+
+  &__header {
+    grid-column: 1 / -1;
+    align-self: end;
+    justify-self: center;
+    text-align: center;
+  }
+
+  &__container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin: 2rem;
+    
+
+    @media screen and (max-width: 37.5em) {
+      margin: 0;
+   }
+}
+
+  &__designer, &__frontend,  &__others {
+      align-self: start;
+      font-size: 1.6rem;
+      height: 37rem;
+      width: 30rem;
+
+      @media screen and (max-width: 37.5em) {
+        font-size: 20%;
+     }
+
+     @media screen and (max-width: 23.5em) {
+      font-size: 10%;
+      width: 15rem;
+      margin: 0;
+   }
+  }
+
+  &__frontend {
+    justify-self: end;
+  }
+
+  &__others {
+    justify-self: start;
+   }
+
+  &__arrow {
+    grid-column: 1 / -1;
+    align-self: start;
+  }
+}

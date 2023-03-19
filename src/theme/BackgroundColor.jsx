@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useThemeContext } from "./../context/theme-context";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
 
@@ -23,17 +23,13 @@ const BackgroundColor = ({ backgroundColors }) => {
     toggleThemeMode();
   };
 
-  useEffect(() => {
-    toggleSelectedTheme();
-  }, []);
-
   return (
     <>
       <DarkModeSwitch
-        style={{ margin: "2rem" }}
+        style={{ margin: "2.6rem 1.8rem 2.6rem 2.6rem" }}
         checked={isDarkMode}
         onClick={toggleSelectedTheme}
-        size={30}
+        size={20}
       />
     </>
   );

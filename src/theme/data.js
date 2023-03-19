@@ -7,4 +7,4 @@ export const primaryColors = [
   { className: "color-6" },
 ];
 
-export const backgroundColors = [{ className: "bg-1" }, { className: "bg-2" }];
+

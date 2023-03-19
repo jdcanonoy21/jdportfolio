@@ -1,48 +1,52 @@
-import { HiDownload } from "react-icons/hi";
 import AboutImage from "../../assets/about.jpg";
 import CV from "../../assets/cv.pdf";
-import data from "./data";
-import Card from "../../components/Card";
+import LineDraw from "./../../components/LineDraw";
+import ArrowDown from "./../../components/ArrowDown";
+import IntersectionObserverComponent from "../../hooks/Observer";
 import "./About.scss";
 
 const About = () => {
   return (
     <section id="about" className="about">
-      <div className="container about__container">
+      <div className="about__header" ata-aos="fade-up" data-aos-duration="1000">
+        <IntersectionObserverComponent
+          firstClassName="line--draw line--draw-motion"
+          secondClassName="line--draw"
+        >
+          <h2 className="heading__secondary">&lt; 01. About &gt;</h2>
+        </IntersectionObserverComponent>
+      </div>
+      <div className="about__container">
         <div className="about__left">
-          <div className="about__portrait">
-            <img src={AboutImage} alt="About" />
-          </div>
-          <p>
-            I am always eager to learn new technologies and techniques to
-            improve my skills and keep up with industry trends. I enjoy working
-            in a collaborative team environment and believe that open
-            communication and teamwork are crucial to the success of any
-            project.
-          </p>
-          <div className="about__cv">
-            <a
-              href={CV}
-              className="btn primary"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Download CV <HiDownload />
-            </a>
-          </div>
+          <IntersectionObserverComponent
+            firstClassName="line--draw line--draw-motion textEffect textEffect__cover"
+            secondClassName="line--draw textEffect"
+          >
+            <p className="about__content">
+              Hello, I'm Jason. After graduating, I landed a job at a printing
+              press company where I worked for 2 years, followed by another year
+              at a Korean newspaper. During this time, I honed my design skills
+              in areas such as colors, typography, and software tools like
+              Photoshop, InDesign, and Illustrator. <br /> <br /> After that, I
+              spent 8 years working as a web and graphic designer for a software
+              development company. In this role, I designed logos, brochures,
+              banners, websites, and other marketing materials. Additionally, I
+              also served as an assistant trainer, helping to deploy software
+              and provide training to users on how to use it.
+            </p>
+          </IntersectionObserverComponent>
         </div>
         <div className="about__right">
-          <div className="about__cards">
-            {data.map((item) => (
-              <Card key={item.id} className="about__card">
-                <span>{item.icon}</span>
-                <h5>{item.title}</h5>
-                <large>{item.desc}</large>
-              </Card>
-            ))}
+          <div
+            className="about__image"
+            ata-aos="fade-in"
+            data-aos-duration="1000"
+          >
+            <img src={AboutImage} alt="" />
           </div>
         </div>
       </div>
+      <ArrowDown link="skills" />
     </section>
   );
 };
