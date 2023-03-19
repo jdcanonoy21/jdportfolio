@@ -1,5 +1,4 @@
 import ArrowDown from "../../components/ArrowDown";
-import LineDraw from "../../components/LineDraw";
 import IntersectionObserverComponent from "../../hooks/Observer";
 import data from "./data";
 import "./Skills.scss";

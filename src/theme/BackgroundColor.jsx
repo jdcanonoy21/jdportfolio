@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useThemeContext } from "./../context/theme-context";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
 
@@ -9,7 +9,7 @@ const BackgroundColor = ({ backgroundColors }) => {
   const secondClassName = backgroundColors[1].className;
 
   const [selectedTheme, setSelectedTheme] = useState(firstClassName);
-  const [isDarkMode, setDarkMode] = useState(true);
+  const [isDarkMode, setDarkMode] = useState(false);
 
   const toggleThemeMode = () => {
     setDarkMode(!isDarkMode);
@@ -22,6 +22,10 @@ const BackgroundColor = ({ backgroundColors }) => {
     handleTheme(selectedTheme);
     toggleThemeMode();
   };
+
+  useEffect(() => {
+    toggleThemeMode();
+  }, []);
 
   return (
     <>
