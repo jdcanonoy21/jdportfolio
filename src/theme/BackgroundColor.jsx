@@ -16,7 +16,7 @@ const BackgroundColor = ({ backgroundColors }) => {
   };
 
   useEffect(() => {
-    setDarkMode(isDarkMode);
+    toggleSelectedTheme();
   }, []);
 
   const toggleSelectedTheme = () => {
