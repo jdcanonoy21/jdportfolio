@@ -1,6 +1,5 @@
 import AboutImage from "../../assets/about.jpg";
 import CV from "../../assets/cv.pdf";
-import LineDraw from "./../../components/LineDraw";
 import ArrowDown from "./../../components/ArrowDown";
 import IntersectionObserverComponent from "../../hooks/Observer";
 import "./About.scss";
@@ -37,13 +36,14 @@ const About = () => {
           </IntersectionObserverComponent>
         </div>
         <div className="about__right">
-          <div
-            className="about__image"
-            ata-aos="fade-in"
-            data-aos-duration="1000"
+          <IntersectionObserverComponent
+            firstClassName="line--draw line--draw-motion "
+            secondClassName="line--draw"
           >
-            <img src={AboutImage} alt="" />
-          </div>
+            <div className="about__image">
+              <img src={AboutImage} alt="" />
+            </div>
+          </IntersectionObserverComponent>
         </div>
       </div>
       <ArrowDown link="skills" />

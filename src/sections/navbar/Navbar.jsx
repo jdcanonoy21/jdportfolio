@@ -1,15 +1,15 @@
-import React, { useState } from "react";
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { ReactComponent as Logo } from "../../assets/logo.svg";
-import { backgroundColors } from "./data";
+import { backgroundColors, data } from "./data";
 import BackgroundColor from "../../theme/BackgroundColor";
 import Theme from "./../../theme/Theme";
 import Delayed from "../../components/Delayed";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import "./Navbar.scss";
 
 const Navbar = () => {
   const [navActive, setNavActive] = useState(false);
+  const [menuNav, setMenuNav] = useState(false);
 
   const navBackground = () => {
     if (window.scrollY >= 100) {
@@ -19,15 +19,29 @@ const Navbar = () => {
     }
   };
 
+  const handleNavClick = () => {
+    setMenuNav(!menuNav);
+  };
+
+  const handlePageNavClick = (e, nav) => {
+    e.preventDefault();
+    setMenuNav(!menuNav);
+    window.location.href = nav;
+  };
+
+  useEffect(() => {
+    console.log("from nav");
+  }, [menuNav]);
+
   window.addEventListener("scroll", navBackground);
   return (
     <Delayed time={4000} firstClass="hide" secondClass="hide show">
       <nav
         className={navActive ? "navigation navigation--active" : "navigation"}
       >
-        <a href="#" className="navigation__logo">
+        <Link href="#" className="navigation__logo">
           <Logo className="navigation__logo-svg" />
-        </a>
+        </Link>
         <div className="navigation__theme">
           <Theme />
         </div>
@@ -36,6 +50,8 @@ const Navbar = () => {
             <BackgroundColor backgroundColors={backgroundColors} />
           </div>
           <input
+            onChange={handleNavClick}
+            checked={menuNav}
             type="checkbox"
             className="navigation__checkbox"
             id="navi-toggle"
@@ -49,26 +65,17 @@ const Navbar = () => {
 
           <nav className="navigation__nav">
             <ul className="navigation__list">
-              <li className="navigation__item">
-                <a href="#" className="navigation__link">
-                  Home
-                </a>
-              </li>
-              <li className="navigation__item">
-                <a href="#" className="navigation__link">
-                  Services
-                </a>
-              </li>
-              <li className="navigation__item">
-                <a href="#" className="navigation__link">
-                  Tours
-                </a>
-              </li>
-              <li className="navigation__item">
-                <a href="#" className="navigation__link">
-                  Contact Us
-                </a>
-              </li>
+              {data.map((item) => (
+                <li className="navigation__item" key={item.id}>
+                  <Link
+                    to={item.link}
+                    className="navigation__link"
+                    onClick={(e) => handlePageNavClick(e, item.link)}
+                  >
+                    {item.title}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </nav>
         </div>

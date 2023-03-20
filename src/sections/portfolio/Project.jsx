@@ -12,12 +12,12 @@ const Project = (props) => {
       <p>{desc}</p>
       <div className="portfolio__project-cta">
         {demo && (
-          <Link to={demo} className="btn sm" target="_blank">
+          <Link to={demo} className="btn sm">
             Demo
           </Link>
         )}
         {github && (
-          <Link to={github} className="btn sm primary" target="_blank">
+          <Link to={github} className="btn sm primary">
             Github
           </Link>
         )}

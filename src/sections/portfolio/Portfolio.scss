@@ -64,6 +64,7 @@
     &__project-cta {
         display: flex;
         gap: 1rem;
+        z-index: 1;
     }
     
     &__project:hover .btn.sm {
@@ -79,7 +80,25 @@
 }
 
 
-
+.slideUp {
+    transform: translateY(200%);
+      opacity: 0;
+      animation: slide-in 1s ease-out forwards;
+      animation-delay: 1s;
+      color: var(--color-white);
+    animation: slideUp 4s;
+  }
+  
+  @keyframes slideUp {
+      0% {
+          opacity: 0;
+      transform: translateY(200%);
+      }
+      100% {
+          opacity: 1;
+          transform: translateY(0%);
+      }
+  }
 
 .card .porfolio__project {
     animation: animateProject 800ms ease-in forwards;

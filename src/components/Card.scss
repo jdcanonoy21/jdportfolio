@@ -12,17 +12,7 @@
   font-family: 'openSans';
 }
 
-.card:hover {
-  background: transparent;
-  border-color: var(--color-primary);
-  transform: translateY(-0.5rem);
-}
 
 .card.light {
   background: transparent;
-}
-
-.card.light:hover {
-  background: transparent;
-  border-color: var(--color-light);
 }
