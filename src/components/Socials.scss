@@ -5,6 +5,11 @@
   left: 3rem;
   bottom: 0;
 
+  /* MEDIA QUERIES (tablets) */
+  @media screen and (max-width: 56.5em) {
+    display: none;
+  }
+
   &  a {
     width: 3rem;
     font-size: 1.5rem;

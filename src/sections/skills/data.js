@@ -23,7 +23,7 @@ const data = [
       "Javascript",
       "React",
       "Learning Nextjs",
-      "illing to learn other skills as required",
+      "Willing to learn other skills as required",
     ],
   },
   {

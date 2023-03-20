@@ -3,6 +3,7 @@ import CV from "../../assets/cv.pdf";
 import ArrowDown from "./../../components/ArrowDown";
 import IntersectionObserverComponent from "../../hooks/Observer";
 import "./About.scss";
+import { Link } from "react-router-dom";
 
 const About = () => {
   return (
@@ -42,6 +43,21 @@ const About = () => {
           >
             <div className="about__image">
               <img src={AboutImage} alt="" />
+            </div>
+          </IntersectionObserverComponent>
+          <IntersectionObserverComponent
+            firstClassName="textEffect textEffect__cover"
+            secondClassName=" textEffect"
+          >
+            <div className="about__right-cta ">
+              <Link
+                to={CV}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn--about btn--primary"
+              >
+                Download CV
+              </Link>
             </div>
           </IntersectionObserverComponent>
         </div>

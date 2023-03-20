@@ -44,8 +44,27 @@
     }
 
     &__right{
+        display: flex;
         align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+    
     }
+
+    &__right-cta{
+        font-size: 1.6rem;
+        text-align: center;
+        border: 1px solid;
+        border-color: transparent;
+        margin-top: 1rem;
+    }
+
+    &__right-cta a {
+        padding: 1rem;
+        color: var(--color-white);
+    }
+
 
     &__image{
         width: 20rem;

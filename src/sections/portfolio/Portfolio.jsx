@@ -41,7 +41,9 @@ const Portfolio = () => {
         />
         <Projects projects={projects} />
       </div>
-      <ArrowDown link="contact" />
+      <div className="portfolio__arrow">
+        <ArrowDown link="contact" />
+      </div>
     </section>
   );
 };
