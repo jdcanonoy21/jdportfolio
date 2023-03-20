@@ -9,11 +9,15 @@ const BackgroundColor = ({ backgroundColors }) => {
   const secondClassName = backgroundColors[1].className;
 
   const [selectedTheme, setSelectedTheme] = useState(firstClassName);
-  const [isDarkMode, setDarkMode] = useState(false);
+  const [isDarkMode, setDarkMode] = useState(true);
 
   const toggleThemeMode = () => {
     setDarkMode(!isDarkMode);
   };
+
+  useEffect(() => {
+    toggleThemeMode();
+  }, []);
 
   const toggleSelectedTheme = () => {
     setSelectedTheme((prevSelectedTheme) =>
@@ -23,10 +27,6 @@ const BackgroundColor = ({ backgroundColors }) => {
     toggleThemeMode();
   };
 
-  useEffect(() => {
-    toggleThemeMode();
-  }, []);
-
   return (
     <>
       <DarkModeSwitch
@@ -34,8 +34,6 @@ const BackgroundColor = ({ backgroundColors }) => {
         checked={isDarkMode}
         onClick={toggleSelectedTheme}
         size={20}
-        moonColor="black"
-        sunColor="white"
       />
     </>
   );
