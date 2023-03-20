@@ -36,7 +36,7 @@
         margin:-1px;
         border: 0;
         padding: 1.3rem 1.8rem;
-        font-family: openSans;
+        font-family: openSans, sans-serif, monospace;
         margin-right: 35rem;
         color: var(--color-black);
 
@@ -54,7 +54,7 @@
     }
 
     &__desc {
-        font-family: openSans;
+        font-family: openSans, sans-serif, monospace;
         font-size: 1.8rem;
         text-align: left;
         margin: -1px;

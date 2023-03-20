@@ -34,6 +34,8 @@ const BackgroundColor = ({ backgroundColors }) => {
         checked={isDarkMode}
         onClick={toggleSelectedTheme}
         size={20}
+        moonColor="black"
+        sunColor="white"
       />
     </>
   );
