@@ -16,15 +16,7 @@ const data = [
     id: 2,
     name: "Frontend",
     title: "Front-end Developer",
-    tools: [
-      "HTML",
-      "CSS",
-      "SCSS",
-      "Javascript",
-      "React",
-      "Learning Nextjs",
-      "Willing to learn other skills as required",
-    ],
+    tools: ["HTML", "CSS", "SCSS", "Javascript", "React", "Learning Nextjs"],
   },
   {
     id: 3,
