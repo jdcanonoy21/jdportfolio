@@ -13,6 +13,7 @@
 
     &__container {
         text-align: center;
+        padding: 3rem;
     }
 
     &__main {
@@ -28,6 +29,11 @@
 
          & h2 {
             color: var(--color-primary);
+
+            /* MEDIA QUERIES (phones) */
+         @media screen and (max-width: 23.5em) {
+            font-size: 2rem;
+        }
         }
         
     
@@ -64,8 +70,6 @@
          /* MEDIA QUERIES (phones) */
          @media screen and (max-width: 23.5em) {
             font-size: 1rem;
-            width: 70%;
-            padding: 1rem 1rem;
         }
         
     }
