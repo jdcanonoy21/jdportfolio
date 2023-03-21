@@ -1,5 +1,4 @@
-import { ReactComponent as Logo } from "../../assets/logo.svg";
-// import Logo from "../../components/Logo";
+import SplashLogo from "../../components/SplashLogo";
 import CardFlip from "../../components/CardFlip";
 import LineDraw from "../../components/LineDraw";
 import ArrowDown from "../../components/ArrowDown";
@@ -8,7 +7,7 @@ import "./Header.scss";
 const Header = () => {
   return (
     <section className="header" id="header">
-      <CardFlip front={<Logo className="header__logo" />}>
+      <CardFlip front={<SplashLogo className="header__logo" />}>
         <div className="header__container">
           <LineDraw time="2500" className="header__greetings">
             Hi, my name is

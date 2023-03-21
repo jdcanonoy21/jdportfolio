@@ -5,7 +5,7 @@ const CardFlip = ({ front, children }) => {
   const [bigLogo, setBigLogo] = useState(true);
 
   useEffect(() => {
-    let cardFlip = setTimeout(() => setBigLogo(false), 1000);
+    let cardFlip = setTimeout(() => setBigLogo(false), 4000);
 
     return () => clearTimeout(cardFlip);
   }, []);
