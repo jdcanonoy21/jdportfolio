@@ -42,9 +42,6 @@ const Navbar = () => {
         <Link href="#" className="navigation__logo">
           <Logo className="navigation__logo-svg" />
         </Link>
-        <div className="navigation__theme">
-          <Theme />
-        </div>
         <div className="navigation__menu">
           <div className="navigation__mode">
             <BackgroundColor backgroundColors={backgroundColors} />
@@ -64,6 +61,9 @@ const Navbar = () => {
           <div className="navigation__background">&nbsp;</div>
 
           <nav className="navigation__nav">
+            <div className="navigation__theme">
+              <Theme />
+            </div>
             <ul className="navigation__list">
               {data.map((item) => (
                 <li className="navigation__item" key={item.id}>

@@ -1,6 +1,5 @@
 import SplashLogo from "../../components/SplashLogo";
 import CardFlip from "../../components/CardFlip";
-import LineDraw from "../../components/LineDraw";
 import ArrowDown from "../../components/ArrowDown";
 import "./Header.scss";
 
@@ -9,18 +8,17 @@ const Header = () => {
     <section className="header" id="header">
       <CardFlip front={<SplashLogo className="header__logo" />}>
         <div className="header__container">
-          <LineDraw time="2500" className="header__greetings">
-            Hi, my name is
-          </LineDraw>
-          <LineDraw time="3500" className="header__main">
+          <div className="header__main">
+            <div className="header__greetings">Hi, my name is</div>
             <h1>Jason Delle Canonoy</h1>
 
             <h2>I am a frontend developer</h2>
-          </LineDraw>
-          <LineDraw time="3000" className="header__desc">
-            I am a Cebu-based frontend developer and graphic designer with
-            experience in both print and digital design.
-          </LineDraw>
+            <div className="header__desc">
+              I am a Cebu-based frontend developer and graphic designer with
+              <br />
+              experience in both print and digital design.
+            </div>
+          </div>
           <ArrowDown link="about" time="8000" />
         </div>
       </CardFlip>
