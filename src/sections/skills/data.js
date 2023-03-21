@@ -2,7 +2,7 @@ const data = [
   {
     id: 1,
     name: "Design",
-    title: "UI/UX Designing",
+    title: "UI/UX",
     tools: [
       "Adobe Illustrator",
       "Adobe Photoshop",
