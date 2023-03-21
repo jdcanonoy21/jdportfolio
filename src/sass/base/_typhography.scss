@@ -14,3 +14,37 @@
   color: var(--color-black);
   font-family: openSans;
 }
+
+
+.textEffect {
+  border:0;
+  background-size: 1240%;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, var(--color-black) 50%);
+  transition: background-position 3s;
+  transition-delay: 1s;
+  width: 100%;
+  overflow: hidden;
+ 
+
+  &__cover{
+    background-position: 100%;
+    & > p, ul, h2, h3 {
+      opacity: 0;
+      animation: slide-in 1s ease-out forwards;
+      animation-delay: 1s;
+      color: var(--color-white);
+    }
+  }
+}
+
+
+@keyframes slide-in {
+	0% {
+		opacity: 0;
+    transform: translateY(200%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0%);
+	}
+}
