@@ -28,10 +28,15 @@
         height: 2vw;
     }
 
+    @media screen and (max-width: 37.5em) {
+      width: 4vw;
+      height: 4vw;
+    }
+
     @media screen and (max-width: 23.5em) {
       width: 5vw;
       height: 5vw;
-  }
+    }
   }
 
   & span:nth-child(2) {
