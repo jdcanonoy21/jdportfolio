@@ -21,12 +21,19 @@ $color-black: var(--color-black);
     .navigation__logo {
       width: 4.5rem;
       margin: .5rem 0 0 2rem;
+
+       
     }
   }
   
   &__logo {
     width: 6.5rem;
     margin: 2rem 0 0 2rem;
+
+    /* MEDIA QUERIES (phones) */
+       @media screen and (max-width: 37.5em) {
+        width: 4rem;
+      }
   }
 
   &__logo-svg{
@@ -154,6 +161,11 @@ $color-black: var(--color-black);
       height: 3px;
       background-color: $color-primary;
       display: inline-block;
+
+       /* MEDIA QUERIES (phones) */
+       @media screen and (max-width: 37.5em) {
+        width: 3rem;
+      }
     }
 
     &::before,
