@@ -6,8 +6,8 @@ const Projects = ({ projects }) => {
     <div className="container portfolio__projects">
       {projects.map((project) => (
         <IntersectionObserverComponent
-          firstClassName="line--draw line--draw-motion"
-          secondClassName="line--draw"
+          firstClassName="hide show"
+          secondClassName="show"
         >
           <Project key={project.id} {...project} />
         </IntersectionObserverComponent>
