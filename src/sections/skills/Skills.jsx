@@ -7,10 +7,7 @@ const Skills = () => {
   return (
     <section id="skills" className="skills">
       <div className="skills__header">
-        <IntersectionObserverComponent
-          firstClassName="line--draw line--draw-motion"
-          secondClassName="line--draw"
-        >
+        <IntersectionObserverComponent>
           <h2 className="heading__secondary">&lt; 02. Skills &gt;</h2>
         </IntersectionObserverComponent>
       </div>
