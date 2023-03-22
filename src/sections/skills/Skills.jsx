@@ -18,8 +18,8 @@ const Skills = () => {
         {data.map((skills) => {
           return (
             <IntersectionObserverComponent
-              firstClassName="line--draw line--draw-motion textEffect textEffect__cover"
-              secondClassName="line--draw textEffect"
+              firstClassName="textEffect textEffect__cover"
+              secondClassName="textEffect"
             >
               <div className="skills__frontend" key={skills.id}>
                 <h2 className="heading__secondary">&lt; {skills.title} &gt;</h2>

@@ -9,10 +9,7 @@ const About = () => {
   return (
     <section id="about" className="about">
       <div className="about__header" ata-aos="fade-up" data-aos-duration="1000">
-        <IntersectionObserverComponent
-          firstClassName="line--draw line--draw-motion"
-          secondClassName="line--draw"
-        >
+        <IntersectionObserverComponent>
           <h2 className="heading__secondary">&lt; 01. About &gt;</h2>
         </IntersectionObserverComponent>
       </div>

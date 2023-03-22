@@ -28,8 +28,8 @@ const Portfolio = () => {
     <section id="portfolio" className="portfolio">
       <div className="portfolio__header">
         <IntersectionObserverComponent
-          firstClassName="line--draw line--draw-motion"
-          secondClassName="line--draw"
+          firstClassName="hide show"
+          secondClassName="hide"
         >
           <h2 className="heading__secondary">&lt; 03. Projects &gt;</h2>
         </IntersectionObserverComponent>
