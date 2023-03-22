@@ -1,10 +1,8 @@
 import { useState } from "react";
 import Projects from "./Projects";
 import ProjectsCategories from "./ProjectsCategories";
-import ArrowDown from "../../components/ArrowDown";
 import data from "./data";
 import "./Portfolio.scss";
-import IntersectionObserverComponent from "../../hooks/Observer";
 
 const Portfolio = () => {
   const [projects, setProjects] = useState(data);
@@ -27,12 +25,7 @@ const Portfolio = () => {
   return (
     <section id="portfolio" className="portfolio">
       <div className="portfolio__header">
-        <IntersectionObserverComponent
-          firstClassName="hide show"
-          secondClassName="hide"
-        >
-          <h2 className="heading__secondary">&lt; 03. Projects &gt;</h2>
-        </IntersectionObserverComponent>
+        <h2 className="heading__secondary">&lt; 03. Projects &gt;</h2>
       </div>
       <div className="portfolio__container">
         <ProjectsCategories
@@ -40,9 +33,6 @@ const Portfolio = () => {
           onFilterProjects={handleFilterProjects}
         />
         <Projects projects={projects} />
-      </div>
-      <div className="portfolio__arrow">
-        <ArrowDown link="contact" />
       </div>
     </section>
   );

@@ -1,6 +1,5 @@
 import SplashLogo from "../../components/SplashLogo";
 import CardFlip from "../../components/CardFlip";
-import ArrowDown from "../../components/ArrowDown";
 import "./Header.scss";
 
 const Header = () => {
@@ -18,7 +17,6 @@ const Header = () => {
               experience in both print and digital design.
             </div>
           </div>
-          <ArrowDown link="about" time="8000" />
         </div>
       </CardFlip>
     </section>
