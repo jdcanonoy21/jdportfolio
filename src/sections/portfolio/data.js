@@ -44,7 +44,7 @@ const data = [
     image: Image4,
     title: "Inkstone",
     desc: "I have done freelance website frontend design",
-    demo: "https://inkstoneliterary.com/",
+    demo: "",
     github: "",
     alt: "Freelance Website Design Inkstone",
   },
