@@ -15,7 +15,6 @@ const Header = () => {
             <h2>I am a frontend developer</h2>
             <div className="header__desc">
               I am a Cebu-based frontend developer and graphic designer with
-              <br />
               experience in both print and digital design.
             </div>
           </div>
