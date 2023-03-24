@@ -14,11 +14,6 @@ const BackgroundColor = ({ backgroundColors }) => {
   const toggleThemeMode = () => {
     setDarkMode(!isDarkMode);
   };
-
-  useEffect(() => {
-    toggleSelectedTheme();
-  }, []);
-
   const toggleSelectedTheme = () => {
     setSelectedTheme((prevSelectedTheme) =>
       prevSelectedTheme === firstClassName ? secondClassName : firstClassName

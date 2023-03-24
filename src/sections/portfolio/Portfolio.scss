@@ -1,23 +1,25 @@
 .portfolio {
-    transition: var(--transition);
-    padding: 10rem 0;
+    justify-content: center;
     display: flex;
-    flex-direction: column;
+    gap: 5rem;
+    flex-wrap: wrap;
+    align-content: center;
+    background-color: #ffffff;
+    padding: 10rem 2rem;
 
     &__header {
-        text-align: center;
-        margin-bottom: 1px;
-        font-size: 2rem;
-        justify-items: center;
-        align-self: center;
+        text-align: left;
+        display: block;
+        width: 100rem;
 
-        @media screen and (max-width: 64em) {
-            
+        h3 {
+            font-size: 3rem;
+            font-family: josefinsans;
         }
       }
 
       &__container {
-        width: 100%;
+        width: 100rem;
         display: flex;
         flex-direction: column;
         justify-content: center;

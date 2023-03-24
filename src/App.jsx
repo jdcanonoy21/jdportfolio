@@ -1,18 +1,15 @@
+import { useState, useEffect } from "react";
 import { BrowserRouter } from "react-router-dom";
-import { useThemeContext } from "./context/theme-context";
 import Navbar from "./sections/navbar/Navbar";
 import Home from "./pages/Home";
-import Socials from "./components/Socials";
 
 const App = () => {
-  const { themeState } = useThemeContext();
-
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <BrowserRouter>
-      <main className={`${themeState.primary} ${themeState.background}`}>
-        <Navbar />
+      <main>
+        <Navbar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
         <Home />
-        <Socials />
       </main>
     </BrowserRouter>
   );

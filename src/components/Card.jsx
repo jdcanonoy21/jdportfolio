@@ -1,10 +1,12 @@
+import React from "react";
 import "./Card.scss";
 
-const Card = ({ children, className, onClick }) => {
+const Card = ({ className, children, header }) => {
   return (
-    <article className={`card ${className}`} onClick={onClick}>
-      {children}
-    </article>
+    <div className={`card ${className}`}>
+      <header className="card__header">{header}</header>
+      <div className="card__body">{children}</div>
+    </div>
   );
 };
 

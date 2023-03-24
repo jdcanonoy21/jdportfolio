@@ -1,86 +1,86 @@
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import React, { useLayoutEffect, useRef, useEffect } from "react";
 import { ReactComponent as Logo } from "../../assets/logo.svg";
-import { backgroundColors, data } from "./data";
-import BackgroundColor from "../../theme/BackgroundColor";
-import Theme from "./../../theme/Theme";
-import Delayed from "../../components/Delayed";
+import data from "./data";
 import "./Navbar.scss";
+import { Link } from "react-router-dom";
+import { gsap } from "gsap";
 
-const Navbar = () => {
-  const [navActive, setNavActive] = useState(false);
-  const [menuNav, setMenuNav] = useState(false);
+const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
+  // const logoRef = useRef();
+  const topRef = useRef();
+  const bottomRef = useRef();
 
-  const navBackground = () => {
-    if (window.scrollY >= 100) {
-      setNavActive(true);
-    } else {
-      setNavActive(false);
-    }
-  };
+  // store the timeline in a ref
+  const menuIconTl = useRef();
 
-  const handleNavClick = () => {
-    setMenuNav(!menuNav);
-  };
+  // useLayoutEffect(() => {
+  //   gsap.from(logoRef.current, {
+  //     delay: 1,
+  //     x: 400,
+  //     y: 300,
+  //     scaleX: 4,
+  //     scaleY: 4,
+  //   });
+  // }, []);
+
+  useEffect(() => {
+    menuIconTl.current = gsap
+      .timeline({
+        default: {
+          duration: 0.3,
+          ease: "power2.out",
+        },
+      })
+
+      .fromTo(topRef.current, { y: 0 }, { y: 4.5 })
+      .fromTo(bottomRef.current, { y: 0 }, { y: -4.5 }, 0)
+      .fromTo(topRef.current, { rotation: 0 }, { rotation: 135 }, 0)
+      .fromTo(bottomRef.current, { rotation: 0 }, { rotation: 45 }, 0);
+  }, []);
+
+  useEffect(() => {
+    menuIconTl.current.reversed(!isMenuOpen);
+  }, [isMenuOpen]);
 
   const handlePageNavClick = (e, nav) => {
     e.preventDefault();
-    setMenuNav(!menuNav);
     window.location.href = nav;
   };
 
-  useEffect(() => {
-    console.log("from nav");
-  }, [menuNav]);
-
-  window.addEventListener("scroll", navBackground);
   return (
-    <Delayed time={4000} firstClass="hide" secondClass="hide show">
-      <nav
-        className={navActive ? "navigation navigation--active" : "navigation"}
-      >
-        <Link href="#" className="navigation__logo">
-          <Logo className="navigation__logo-svg" />
-        </Link>
-        <div className="navigation__menu">
-          <div className="navigation__mode">
-            <BackgroundColor backgroundColors={backgroundColors} />
-          </div>
-          <input
-            onChange={handleNavClick}
-            checked={menuNav}
-            type="checkbox"
-            className="navigation__checkbox"
-            id="navi-toggle"
-          />
-
-          <label htmlFor="navi-toggle" className="navigation__button">
-            <span className="navigation__icon"></span>
-          </label>
-
-          <div className="navigation__background">&nbsp;</div>
-
-          <nav className="navigation__nav">
-            <div className="navigation__theme">
-              <Theme />
-            </div>
-            <ul className="navigation__list">
-              {data.map((item) => (
-                <li className="navigation__item" key={item.id}>
+    <nav className="nav">
+      <div className="nav__container">
+        <Logo className="nav__logo" id="logo" />
+      </div>
+      <div className="nav__icon" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+        <span ref={topRef}></span>
+        <span ref={bottomRef}></span>
+      </div>
+      <div className="nav__menu">
+        <nav>
+          <ul
+            className={isMenuOpen ? "nav__list nav__list-active" : "nav__list"}
+          >
+            {data.map((nav) => {
+              return (
+                <li
+                  key={nav.id}
+                  className="nav__item"
+                  onClick={() => setIsMenuOpen(!isMenuOpen)}
+                >
                   <Link
-                    to={item.link}
-                    className="navigation__link"
-                    onClick={(e) => handlePageNavClick(e, item.link)}
+                    to={nav.link}
+                    onClick={(e) => handlePageNavClick(e, nav.link)}
                   >
-                    {item.title}
+                    {nav.title}
                   </Link>
                 </li>
-              ))}
-            </ul>
-          </nav>
-        </div>
-      </nav>
-    </Delayed>
+              );
+            })}
+          </ul>
+        </nav>
+      </div>
+    </nav>
   );
 };
 

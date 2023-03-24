@@ -1,13 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Delayed.scss";
 
-const Delayed = ({
-  time = 1,
-  children,
-  firstClass,
-  secondClass,
-  className = "",
-}) => {
+const Delayed = ({ time = 1, children }) => {
   const [delay, setDelay] = useState(true);
 
   useEffect(() => {
@@ -17,11 +11,7 @@ const Delayed = ({
       clearTimeout(setTimeOut);
     };
   }, []);
-  return (
-    <div className={className + " " + (delay ? firstClass : secondClass)}>
-      {children}
-    </div>
-  );
+  return <div delay>{children}</div>;
 };
 
 export default Delayed;

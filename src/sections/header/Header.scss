@@ -1,6 +1,7 @@
 .header {
     transition: var(--transition);
-    grid-template-rows: 1fr 15rem;
+    padding: 10rem 2rem;
+    background: var(--color-body);
     
 
     &__logo {
@@ -12,98 +13,43 @@
     }
 
     &__container {
-        text-align: center;
-        padding: 3rem;
+        max-width: 100rem;
+        margin: 0 auto;
     }
+
 
     &__main {
         text-align: left;
         display: inline-block;
 
-        & h1 {
+        & h1, & h2 {
             font-size: clamp(40px, 8vw, 80px);
-            letter-spacing: -.5rem;
-            
-
-            @media screen and (max-width: 64em) {
-                letter-spacing: .1rem;
-            }
-
-              /* MEDIA QUERIES (tablets) */
-              @media screen and (max-width: 37.5em) {
-                font-size: 3rem;
-                letter-spacing: .2rem;
-            }
-
-            @media screen and (max-width: 23.5em) {
-                font-size: 2rem;
-                letter-spacing: .1rem;
-                }
+            letter-spacing: -.1rem;
+            margin-bottom: -.1rem;
+            font-family: josefinsans;
         }
 
-         & h2 {
+        & h2 {
             color: var(--color-primary);
-            font-size: clamp(40px, 8vw, 80px);
-            letter-spacing: -.5rem;
-
-            @media screen and (max-width: 64em) {
-                letter-spacing: .1rem;
-            }
-
-
-            @media screen and (max-width: 37.5em) {
-                font-size: 3rem;
-                }
-
-            /* MEDIA QUERIES (phones) */
-         @media screen and (max-width: 23.5em) {
-            font-size: 1.5rem;
-            letter-spacing: .1rem;
-            }
-
-            
-    
-
-           
         }
-        
-    
-
      
     }
 
 
     &__greetings {
         font-size: 1.8rem;
+        padding-bottom: 1rem;
         font-family: openSans, sans-serif, monospace;
         color: var(--color-black);
 
-     
-
-         /* MEDIA QUERIES (phones) */
-        @media screen and (max-width: 37.5em) {
-            font-size: 1.1rem;
-        }
     }
 
     &__desc {
         font-family: openSans, sans-serif, monospace;
         font-size: 1.8rem; 
         color: var(--color-black);
+        padding-top: 1rem;
         max-width: 50rem;
-    
-
-
-
-         /* MEDIA QUERIES (phones) */
-         @media screen and (max-width: 37.5em) {
-            font-size: 1.1rem;
-        }
-
-         /* MEDIA QUERIES (phones) */
-         @media screen and (max-width: 23.5em) {
-            font-size: 1rem;
-        }
         
     }
 
@@ -129,7 +75,9 @@
     }
 }
 
-
+.Typewriter {
+    display: inline-block;
+}
 
 
 

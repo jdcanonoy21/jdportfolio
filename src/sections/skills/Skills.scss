@@ -1,52 +1,74 @@
 .skills {
   transition: var(--transition);
-  padding: 10rem 0;
-  display: flex;
-  flex-direction: column;
-  gap: 5rem
-;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 5rem;
+    flex-wrap: wrap;
+    align-content: center;
+    background-color: #ffffff;
+    padding: 10rem 2rem 30rem 2rem;
+    position: relative;
+
+    @media screen and (min-width: 56.5em) {
+      padding: 10rem 2rem 0 2rem;
+   }
 
 
   &__header {
-    align-self: center;
-    justify-self: center;
-    text-align: center;
+    text-align: left;
+        display: block;
+        width: 100rem;
+
+    & h3 {
+      font-size: 3rem;
+      font-family: josefinsans;
+    }
   }
 
   &__container {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
-    gap: 1rem;
+    flex-direction: column;
+    gap: 2rem;
     flex-wrap: wrap;
-    height: 100%;
-    
+    width: 100rem;
+    position: relative;
+    top: -20rem;
 
-    @media screen and (max-width: 37.5em) {
+    @media screen and (min-width: 37.5em) {
       margin: 0;
       flex-direction: column;
    }
+
+   @media screen and (min-width: 56.5em) {
+    flex-direction: row;
+ }
+  
 }
 
   &__designer, &__frontend,  &__others {
       align-self: start;
       font-size: 1.6rem;
-      height: 37rem;
-      max-width: 20rem;
+      height: 30rem;
+      width: 25rem;
 
-      @media screen and (max-width: 37.5em) {
-        font-size: 20%;
+      @media screen and (min-width: 56.5em) {
+        width: 100%;
      }
-
-     @media screen and (max-width: 23.5em) {
-      font-size: 10%;
-      width: 100%;
-      margin: 0;
-   }
+      
   }
 
   &__arrow {
     align-self: center;
+  }
+}
+
+.frontend{
+  background-color: var(--color-secondary) !important;
+
+  & h2 {
+    color: var(--color-white);
   }
 }

@@ -1,24 +1,23 @@
 import data from "./data";
 import "./Skills.scss";
+import Card from "./../../components/Card";
 
 const Skills = () => {
   return (
     <section id="skills" className="skills">
-      <div className="skills__header">
-        <h2 className="heading__secondary">&lt; 02. Skills &gt;</h2>
-      </div>
       <div className="skills__container">
         {data.map((skills) => {
           return (
-            <div className="skills__frontend" key={skills.id}>
-              <h2 className="heading__secondary">&lt; {skills.title} &gt;</h2>
-              <h3 className="heading__sub">{skills.name} Tools :</h3>
-              <ul className="heading__list">
-                {skills.tools.map((tool, index) => {
-                  return <li key={index}>{tool}</li>;
-                })}
-              </ul>
-            </div>
+            <Card className={skills.name}>
+              <div className="skills__frontend" key={skills.id}>
+                <h2 className="heading__secondary"> {skills.title}</h2>
+                <ul className="heading__list">
+                  {skills.tools.map((tool, index) => {
+                    return <li key={index}>{tool}</li>;
+                  })}
+                </ul>
+              </div>
+            </Card>
           );
         })}
       </div>

@@ -1,6 +1,5 @@
 import AboutImage from "../../assets/about.jpg";
 import CV from "../../assets/cv.pdf";
-import ArrowDown from "./../../components/ArrowDown";
 import IntersectionObserverComponent from "../../hooks/Observer";
 import "./About.scss";
 import { Link } from "react-router-dom";
@@ -9,7 +8,9 @@ const About = () => {
   return (
     <section id="about" className="about">
       <div className="about__header">
-        <h2 className="heading__secondary">&lt; 01. About &gt;</h2>
+        <div className="heading__secondary">
+          <h3>About</h3>
+        </div>
       </div>
       <div className="about__container">
         <div className="about__left">
@@ -25,16 +26,6 @@ const About = () => {
             as an assistant trainer, helping to deploy software and provide
             training to users on how to use it.
           </p>
-        </div>
-        <div className="about__right">
-          <IntersectionObserverComponent
-            firstClassName="line--draw line--draw-motion "
-            secondClassName="line--draw"
-          >
-            <div className="about__image">
-              <img src={AboutImage} alt="" />
-            </div>
-          </IntersectionObserverComponent>
           <IntersectionObserverComponent
             firstClassName="textEffect textEffect__cover"
             secondClassName=" textEffect"
@@ -48,6 +39,16 @@ const About = () => {
               >
                 Download CV
               </Link>
+            </div>
+          </IntersectionObserverComponent>
+        </div>
+        <div className="about__right">
+          <IntersectionObserverComponent
+            firstClassName="line--draw line--draw-motion "
+            secondClassName="line--draw"
+          >
+            <div className="about__image">
+              <img src={AboutImage} alt="" />
             </div>
           </IntersectionObserverComponent>
         </div>

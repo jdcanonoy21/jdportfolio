@@ -14,7 +14,7 @@ const data = [
   },
   {
     id: 2,
-    name: "Frontend",
+    name: "frontend",
     title: "Front-end Developer",
     tools: ["HTML", "CSS", "SCSS", "Javascript", "React", "Learning Nextjs"],
   },

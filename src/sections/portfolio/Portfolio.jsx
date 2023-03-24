@@ -25,7 +25,9 @@ const Portfolio = () => {
   return (
     <section id="portfolio" className="portfolio">
       <div className="portfolio__header">
-        <h2 className="heading__secondary">&lt; 03. Projects &gt;</h2>
+        <div className="heading__secondary">
+          <h3>Projects</h3>
+        </div>
       </div>
       <div className="portfolio__container">
         <ProjectsCategories

@@ -1,9 +1,9 @@
-export const data = [
-  { id: 1, link: "#header", title: "Home" },
-  { id: 2, link: "#about", title: "About" },
-  { id: 4, link: "#skills", title: "Skills" },
-  { id: 4, link: "#portfolio", title: "Projects" },
-  { id: 5, link: "#contact", title: "Contact" },
+const data = [
+  { id: 1, link: "#header", title: "Home", color: "black" },
+  { id: 2, link: "#about", title: "About", color: "white" },
+  { id: 4, link: "#skills", title: "Skills", color: "black" },
+  { id: 4, link: "#portfolio", title: "Projects", color: "white" },
+  { id: 5, link: "#contact", title: "Contact", color: "black" },
 ];
 
-export const backgroundColors = [{ className: "bg-1" }, { className: "bg-2" }];
+export default data;
