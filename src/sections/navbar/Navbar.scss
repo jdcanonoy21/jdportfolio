@@ -73,10 +73,13 @@
   &__item{
     font-size: 1.6rem;
     margin: 0 1rem;
-    padding: 1rem 0;
 
     & a {
       color: var(--color-white);
+      height: 4rem;
+      width: 100%;
+      padding: 1rem 0 0 0;
+    display: inline-block;
 
       @media screen and (min-width:37.5em){
         color: var(--color-black);
