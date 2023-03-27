@@ -1,9 +1,9 @@
-import React, { useLayoutEffect, useRef, useEffect } from "react";
-import { ReactComponent as Logo } from "../../assets/logo.svg";
-import data from "./data";
-import "./Navbar.scss";
-import { Link } from "react-router-dom";
-import { gsap } from "gsap";
+import React, { useRef, useEffect } from 'react';
+import { ReactComponent as Logo } from '../../assets/logo.svg';
+import data from './data';
+import './Navbar.scss';
+import { Link } from 'react-router-dom';
+import { gsap } from 'gsap';
 
 const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
   // const logoRef = useRef();
@@ -28,7 +28,7 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
       .timeline({
         default: {
           duration: 0.3,
-          ease: "power2.out",
+          ease: 'power2.out',
         },
       })
 
@@ -47,6 +47,30 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
     window.location.href = nav;
   };
 
+  const body = document.body;
+  let lastScroll = 0;
+
+  window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+
+    if (currentScroll <= 0) {
+      body.classList.remove('scroll-up');
+      return;
+    }
+
+    if (currentScroll > lastScroll && !body.classList.contains('scroll-down')) {
+      body.classList.remove('scroll-up');
+      body.classList.add('scroll-down');
+    } else if (
+      currentScroll < lastScroll &&
+      body.classList.contains('scroll-down')
+    ) {
+      body.classList.remove('scroll-down');
+      body.classList.add('scroll-up');
+    }
+    lastScroll = currentScroll;
+  });
+
   return (
     <nav className="nav">
       <div className="nav__container">
@@ -59,7 +83,7 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
       <div className="nav__menu">
         <nav>
           <ul
-            className={isMenuOpen ? "nav__list nav__list-active" : "nav__list"}
+            className={isMenuOpen ? 'nav__list nav__list-active' : 'nav__list'}
           >
             {data.map((nav) => {
               return (

@@ -1,6 +1,6 @@
-import data from "./data";
-import "./Skills.scss";
-import Card from "./../../components/Card";
+import data from './data';
+import './Skills.scss';
+import Card from './../../components/Card';
 
 const Skills = () => {
   return (
@@ -8,12 +8,12 @@ const Skills = () => {
       <div className="skills__container">
         {data.map((skills) => {
           return (
-            <Card className={skills.name}>
-              <div className="skills__frontend" key={skills.id}>
+            <Card className={skills.name} key={skills.id}>
+              <div className="skills__frontend">
                 <h2 className="heading__secondary"> {skills.title}</h2>
                 <ul className="heading__list">
-                  {skills.tools.map((tool, index) => {
-                    return <li key={index}>{tool}</li>;
+                  {skills.tools.map((tool, i) => {
+                    return <li key={i}>{tool}</li>;
                   })}
                 </ul>
               </div>
