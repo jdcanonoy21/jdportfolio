@@ -1,8 +1,8 @@
-import CategoryButton from "./CategoryButton";
-import { useState } from "react";
+import CategoryButton from './CategoryButton';
+import { useState } from 'react';
 
 const ProjectsCategories = ({ categories, onFilterProjects }) => {
-  const [activeCategory, setActiveCategory] = useState("all");
+  const [activeCategory, setActiveCategory] = useState('all');
 
   const handleChangeCategory = (activeCat) => {
     setActiveCategory(activeCat);
@@ -17,7 +17,7 @@ const ProjectsCategories = ({ categories, onFilterProjects }) => {
           category={category}
           onChangeCategory={() => handleChangeCategory(category)}
           className={`btn cat__btn ${
-            activeCategory === category ? "primary" : "white"
+            activeCategory === category ? 'primary' : 'white'
           }`}
         />
       ))}

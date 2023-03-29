@@ -32,17 +32,16 @@ const Portfolio = () => {
           </div>
         </Fade>
       </div>
-      <div className="portfolio__container">
-        <Fade bottom>
+      <Fade bottom>
+        <div className="portfolio__container">
           <ProjectsCategories
             categories={uniqueCategories}
             onFilterProjects={handleFilterProjects}
           />
-        </Fade>
-        <Fade bottom>
+
           <Projects projects={projects} />
-        </Fade>
-      </div>
+        </div>
+      </Fade>
     </section>
   );
 };
