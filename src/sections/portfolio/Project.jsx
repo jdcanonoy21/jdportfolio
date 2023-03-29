@@ -6,15 +6,13 @@ const Project = (props) => {
   const { title, image, desc, alt, demo, github, tools } = props;
   return (
     <div className="portfolio__project-content">
-      <div className="portfolio__project-content-left">
-        <Fade bottom>
+      <Fade bottom>
+        <div className="portfolio__project-content-left">
           <div className="portfolio__project-image">
             <img src={image} alt={alt} />
           </div>
-        </Fade>
-      </div>
-      <div className="portfolio__project-content-right">
-        <Fade bottom>
+        </div>
+        <div className="portfolio__project-content-right">
           <h4>{title}</h4>
           <p>{desc}</p>
           <div className="portfolio__project-tools">
@@ -34,8 +32,8 @@ const Project = (props) => {
               </Link>
             )}
           </div>
-        </Fade>
-      </div>
+        </div>
+      </Fade>
     </div>
   );
 };
