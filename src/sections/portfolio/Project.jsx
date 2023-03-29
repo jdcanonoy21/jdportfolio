@@ -7,14 +7,14 @@ const Project = (props) => {
   return (
     <div className="portfolio__project-content">
       <div className="portfolio__project-content-left">
-        <Fade left>
+        <Fade bottom>
           <div className="portfolio__project-image">
             <img src={image} alt={alt} />
           </div>
         </Fade>
       </div>
       <div className="portfolio__project-content-right">
-        <Fade right>
+        <Fade bottom>
           <h4>{title}</h4>
           <p>{desc}</p>
           <div className="portfolio__project-tools">
