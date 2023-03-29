@@ -11,7 +11,7 @@ const data = [
     category: 'Web Development',
     image: Image1,
     title: 'RoyalRealty Concept Website',
-    desc: 'This website is a concept website that I made while learning more about Google Firebase using React. Basically, this website allows you to sign in and sign up using your Gmail account, and lets you post a house for sale or for rent. All the data will be saved in the Firebase database. This website is fully functioning, and it is a clone of a realty website out there. I deployed it on Vercel, a cloud platform service company, which is similar to Netlify. You check the code on GitHub and the live demo below. ',
+    desc: 'This website is a concept website that I made while learning more about Google Firebase using React. Basically, this website allows you to sign in and sign up using your Gmail account, and lets you post or create listing of a house for sale or for rent. All the data will be saved in the Firebase database. This website is fully functional, and it is a clone of a realty website out there. I deployed it on Vercel, a cloud platform service company, which is similar to Netlify. You check the code on GitHub and the live demo below. ',
     demo: 'https://royalrealty.vercel.app/',
     github: 'https://github.com/jdcanonoy21/realty',
     alt: 'Royal realty a concept website',
