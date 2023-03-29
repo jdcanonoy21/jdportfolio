@@ -15,7 +15,7 @@ const data = [
     demo: 'https://royalrealty.vercel.app/',
     github: 'https://github.com/jdcanonoy21/realty',
     alt: 'Royal realty a concept website',
-    tools: ['React', 'Firebase'],
+    tools: ['React', 'Firebase', 'Tailwind'],
   },
   {
     id: 2,
