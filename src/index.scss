@@ -15,13 +15,16 @@
     --color-secondary: #676CDB;
     --color-accent: #F1B457;
     --color-headings: #1b0760;
-    --color-body:#222A36;
-    --color-body-darker:#1C232E;
+    --color-body:#0A192F;
+    --color-body-darker:#091426;
     --color-border:#ccc;
     --border-radius: 30px;
     --color-white:#e7e7e7;
 
     --color-shadow:rgb(179, 179, 179);
+    --color-text-primary: #CCD6F6;
+    --color-text-secondary:#8892B0;
+
   }
 
 @font-face {
@@ -82,9 +85,9 @@ html {
 }
 
 body {
-    font-family: 'Montserrat', openSans;
+    font-family: 'Open Sans', openSans, Helvetica, sans-serif;
     line-height: 1.6;
-    color: var(--color-white);
+    color: var(--color-text-secondary);
     background-color: var(--color-body);
 }
 
@@ -178,7 +181,7 @@ img {
     background: var(--color-light);
     color: var(--color-black);
     padding: 0.6rem 2.5rem;
-    border: 2px solid transparent;
+    border: 2px solid var(--color-text-primary);
     cursor: pointer;
 }
 

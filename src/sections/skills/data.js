@@ -15,7 +15,7 @@ const data = [
   {
     id: 2,
     name: 'frontend',
-    title: 'Front-end Developer',
+    title: 'Frontend Developer',
     tools: [
       'HTML',
       'CSS',
@@ -23,7 +23,6 @@ const data = [
       'Javascript',
       'React',
       'Redux',
-      'Typescript',
       'Bootstrap',
       'Tailwind',
       'Learning Nextjs',
@@ -33,7 +32,15 @@ const data = [
     id: 3,
     name: 'Others',
     title: 'Others',
-    tools: ['Webflow', 'Git', 'Github', 'Docker', 'MySql', 'Learning MongoDB'],
+    tools: [
+      'Webflow',
+      'Git',
+      'Github',
+      'Docker',
+      'MySql',
+      'Firebase',
+      'Learning Mongodb',
+    ],
   },
 ];
 

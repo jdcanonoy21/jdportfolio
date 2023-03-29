@@ -15,9 +15,10 @@
         display: block;
         width: 100rem;
         
+        
         & h3 {
             font-size: 3rem;
-            font-family: josefinsans;
+            color:var(--color-text-primary);
         }
     }
 
@@ -36,7 +37,7 @@
     }
 
     &__content {
-        font-family: openSans;
+        font-family: openSans, Arial, Helvetica, sans-serif;
         align-self: end;
         font-size: 1.6rem;
         border: 0;

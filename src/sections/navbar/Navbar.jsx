@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import { ReactComponent as Logo } from '../../assets/logo.svg';
+import Fade from 'react-reveal/Fade';
 import data from './data';
 import './Navbar.scss';
 import { Link } from 'react-router-dom';
@@ -73,36 +74,42 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
 
   return (
     <nav className="nav">
-      <div className="nav__container">
-        <Logo className="nav__logo" id="logo" />
-      </div>
+      <Fade top>
+        <div className="nav__container">
+          <Logo className="nav__logo" id="logo" />
+        </div>
+      </Fade>
       <div className="nav__icon" onClick={() => setIsMenuOpen(!isMenuOpen)}>
         <span ref={topRef}></span>
         <span ref={bottomRef}></span>
       </div>
       <div className="nav__menu">
-        <nav>
-          <ul
-            className={isMenuOpen ? 'nav__list nav__list-active' : 'nav__list'}
-          >
-            {data.map((nav) => {
-              return (
-                <li
-                  key={nav.id}
-                  className="nav__item"
-                  onClick={() => setIsMenuOpen(!isMenuOpen)}
-                >
-                  <Link
-                    to={nav.link}
-                    onClick={(e) => handlePageNavClick(e, nav.link)}
+        <Fade top>
+          <nav>
+            <ul
+              className={
+                isMenuOpen ? 'nav__list nav__list-active' : 'nav__list'
+              }
+            >
+              {data.map((nav) => {
+                return (
+                  <li
+                    key={nav.id}
+                    className="nav__item"
+                    onClick={() => setIsMenuOpen(!isMenuOpen)}
                   >
-                    {nav.title}
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-        </nav>
+                    <Link
+                      to={nav.link}
+                      onClick={(e) => handlePageNavClick(e, nav.link)}
+                    >
+                      {nav.title}
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </nav>
+        </Fade>
       </div>
     </nav>
   );

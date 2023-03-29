@@ -64,8 +64,9 @@
 
 .frontend{
   background-color: var(--color-secondary) !important;
+  color: var(--color-text-primary);
 
   & h2 {
-    color: var(--color-white);
+    color: var(--color-text-primary);
   }
 }

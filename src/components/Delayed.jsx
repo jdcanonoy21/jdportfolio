@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import "./Delayed.scss";
+import React, { useState, useEffect } from 'react';
+import './Delayed.scss';
 
 const Delayed = ({ time = 1, children }) => {
   const [delay, setDelay] = useState(true);

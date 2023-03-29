@@ -22,11 +22,15 @@
         text-align: left;
         display: inline-block;
 
+        & h1{
+            color:var(--color-text-primary);
+            font-family: josefinsans;
+        }
+
         & h1, & h2 {
             font-size: 3rem;
             letter-spacing: -.1rem;
             margin-bottom: -.1rem;
-            font-family: josefinsans;
 
             @media screen and (min-width:26.5em){
                 font-size: clamp(40px, 8vw, 80px);
@@ -35,16 +39,17 @@
 
         & h2 {
             color: var(--color-primary);
+            font-family: josefinsans;
         }
      
     }
 
 
     &__greetings {
-        font-size: 1.3rem;
+        font-size: 1.6rem;
+        font-weight: 500;
         padding-bottom: 1rem;
-        font-family: openSans, sans-serif, monospace;
-        color: var(--color-black);
+        font-family: 'Open Sans', openSans, Helvetica, sans-serif;
 
         @media screen and (min-width:26.5em){
             font-size: 1.8rem;
@@ -53,7 +58,7 @@
     }
 
     &__desc {
-        font-family: openSans, sans-serif, monospace;
+        font-family: 'Open Sans', openSans, Helvetica, sans-serif;
         font-size: 1.3rem; 
         color: var(--color-black);
         padding-top: 1rem;
