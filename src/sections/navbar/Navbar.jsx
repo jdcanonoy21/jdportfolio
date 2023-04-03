@@ -7,22 +7,11 @@ import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
 
 const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
-  // const logoRef = useRef();
   const topRef = useRef();
   const bottomRef = useRef();
 
   // store the timeline in a ref
   const menuIconTl = useRef();
-
-  // useLayoutEffect(() => {
-  //   gsap.from(logoRef.current, {
-  //     delay: 1,
-  //     x: 400,
-  //     y: 300,
-  //     scaleX: 4,
-  //     scaleY: 4,
-  //   });
-  // }, []);
 
   useEffect(() => {
     menuIconTl.current = gsap

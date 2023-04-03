@@ -81,6 +81,7 @@ html {
     @media screen and (max-width: 64em) {
         font-size: 75%;
     }
+
  
 }
 
@@ -89,8 +90,31 @@ body {
     line-height: 1.6;
     color: var(--color-text-secondary);
     background-color: var(--color-body);
+
+    &::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        background-color: #F5F5F5;
+    }
+
+    &::-webkit-scrollbar{
+        width: 10px;
+        background-color: #F5F5F5;
+    }
+
+    &::-webkit-scrollbar-thumb{
+        background-color: var(--color-primary);
+        
+        background-image: -webkit-gradient(linear, 0 0, 0 100%,
+                        color-stop(.5, var(--color-body)),
+                        color-stop(.5, transparent), to(transparent));
+    }
+
+   
 }
 
+.loading{
+    overflow: hidden;
+}
 
 /* GENERAL CONTAINER CLASS */
 .container {
