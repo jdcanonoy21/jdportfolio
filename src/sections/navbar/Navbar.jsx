@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useLayoutEffect } from 'react';
 import { ReactComponent as Logo } from '../../assets/logo.svg';
 import Fade from 'react-reveal/Fade';
 import data from './data';
@@ -12,6 +12,7 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
 
   // store the timeline in a ref
   const menuIconTl = useRef();
+  const logoRef = useRef();
 
   useEffect(() => {
     menuIconTl.current = gsap
@@ -26,6 +27,16 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
       .fromTo(bottomRef.current, { y: 0 }, { y: -4.5 }, 0)
       .fromTo(topRef.current, { rotation: 0 }, { rotation: 135 }, 0)
       .fromTo(bottomRef.current, { rotation: 0 }, { rotation: 45 }, 0);
+  }, []);
+
+  useLayoutEffect(() => {
+    gsap.from(logoRef.current, {
+      delay: 1,
+      scaleX: 4,
+      scaleY: 4,
+      left: '50%',
+      top: '50%',
+    });
   }, []);
 
   useEffect(() => {
@@ -65,7 +76,7 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
     <nav className="nav">
       <Fade top>
         <div className="nav__container">
-          <Logo className="nav__logo" id="logo" />
+          <Logo className="nav__logo" id="logo" ref={logoRef} />
         </div>
       </Fade>
       <div className="nav__icon" onClick={() => setIsMenuOpen(!isMenuOpen)}>

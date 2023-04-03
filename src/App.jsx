@@ -28,7 +28,10 @@ const App = () => {
       },
     });
 
-    LLOAD.from('.logo-splash', { autoAlpha: 0, duration: 1, color: 'red' });
+    LLOAD.from('.logo-splash', {
+      autoAlpha: 0,
+      duration: 1,
+    });
     LLOAD.to('.load-container', { autoAlpha: 0, duration: 0.8, delay: 0.1 });
   };
 
